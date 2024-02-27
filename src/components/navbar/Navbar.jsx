@@ -23,13 +23,13 @@ const Navbar = () => {
 
             {/* User */}
             <li>
-                <Link to={'/'}>Kamal</Link>
+                <Link to={'/user-dashboard'}>Kamal</Link>
             </li>
 
             {/* Admin */}
-            {/* <li>
-                <Link to={'/'}>Admin</Link>
-            </li> */}
+            <li>
+                <Link to={'/admin-dashboard'}>Admin</Link>
+            </li>
 
             {/* logout */}
             {/* <li>
@@ -45,7 +45,7 @@ const Navbar = () => {
         </ul>
     )
     return (
-        <nav className="bg-pink-600 sticky top-0">
+        <nav className="bg-pink-600 md:sticky top-0 z-10 fixed w-full">
             {/* main  */}
             <div className="lg:flex lg:justify-between items-center py-3 lg:px-3 ">
                 {/* left  */}
