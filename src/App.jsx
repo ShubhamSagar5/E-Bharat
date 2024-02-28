@@ -17,6 +17,8 @@ import AddProductPage from './pages/admin/AddProductPage'
 import UpdateProductPage from './pages/admin/UpdateProductPage'
 import MyState from './context/myState'
 import { Toaster } from 'react-hot-toast'
+import { ProtectedRouteForUser } from './protectedRoute/ProtectedRouteForAdmin'
+import { ProtectedRouteForAdmin } from './protectedRoute/ProtectedRouteForUser'
 
 function App() {
  
@@ -51,19 +53,19 @@ function App() {
     },
     {
       path:'/user-dashboard',
-      element:<UserDashboard/>
+      element:<ProtectedRouteForUser><UserDashboard/></ProtectedRouteForUser>
     },
     {
       path:'/admin-dashboard',
-      element:<AdminDashboard/>
+      element:<ProtectedRouteForAdmin><AdminDashboard/></ProtectedRouteForAdmin>
     },
     {
       path:'/addproduct',
-      element:<AddProductPage/>
+      element:<ProtectedRouteForAdmin><AddProductPage/></ProtectedRouteForAdmin>
     },
     {
-      path:'/updateproduct',
-      element:<UpdateProductPage/>
+      path:'/updateproduct/:id',
+      element:<ProtectedRouteForAdmin><UpdateProductPage/></ProtectedRouteForAdmin>
     },
     
   ])
