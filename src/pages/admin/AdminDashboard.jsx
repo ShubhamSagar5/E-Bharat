@@ -4,18 +4,27 @@ import OrderDetail from '../../components/admin/OrderDetail';
 import UserDetail from '../../components/admin/UserDetail';
 import { useContext } from 'react';
 import myContext from '../../context/myContext';
+import { useNavigate } from 'react-router-dom';
 
 const AdminDashboard = () => {
     const user = JSON.parse(localStorage.getItem('users'));
     const context = useContext(myContext);
     const {getAllProduct} = context;
+
+    const navigate = useNavigate()
+
     return (
         <div>
             {/* Top */}
             <div className="top mb-5 px-5 mt-5">
                 <div className=" bg-pink-50 py-5 border border-pink-100 rounded-lg">
                     <h1 className=" text-center text-2xl font-bold text-pink-500">Admin Dashboard</h1>
+                  <div className='p-2 bg-pink-700 w-[80px] rounded-lg flex justify-center -mt-[30px]'>
+                    <button onClick={()=>navigate('/')}>Home</button>
                 </div>
+                </div>
+
+              
             </div>
 
             <div className="px-5">
