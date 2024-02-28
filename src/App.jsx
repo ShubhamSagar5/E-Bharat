@@ -15,7 +15,7 @@ import UserDashboard from './pages/user/UserDashboard'
 import AdminDashboard from './pages/admin/AdminDashboard'
 import AddProductPage from './pages/admin/AddProductPage'
 import UpdateProductPage from './pages/admin/UpdateProductPage'
-
+import MyState from './context/myState'
 
 function App() {
  
@@ -68,8 +68,10 @@ function App() {
 
 return (
   <div>
-  
-     <RouterProvider router={appRouter} />
+    <MyState>
+      <RouterProvider router={appRouter} />
+    </MyState>
+     
 
    
   </div>

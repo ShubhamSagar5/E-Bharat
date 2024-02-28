@@ -1,6 +1,10 @@
-import { Link } from "react-router-dom";
 
+import { Link } from "react-router-dom";
+ 
 const Footer = () => {
+   
+
+   
     return (
         <div>
             {/* footer  */}
@@ -69,6 +73,7 @@ const Footer = () => {
                                 <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01" />
                             </svg>
                         </a>
+                        
 
                         {/* linkedIn  */}
                         <a className="ml-3 text-gray-100 cursor-pointer">
