@@ -19,6 +19,7 @@ import MyState from './context/myState'
 import { Toaster } from 'react-hot-toast'
 import { ProtectedRouteForUser } from './protectedRoute/ProtectedRouteForAdmin'
 import { ProtectedRouteForAdmin } from './protectedRoute/ProtectedRouteForUser'
+import CategoryPage from './pages/category/CategoryPage'
 
 function App() {
  
@@ -32,7 +33,7 @@ function App() {
       element:<NoPage/>
     },
     {
-      path:'/productinfo',
+      path:'/productinfo/:id',
       element:<ProductInfo/>
     },
     {
@@ -67,6 +68,10 @@ function App() {
       path:'/updateproduct/:id',
       element:<ProtectedRouteForAdmin><UpdateProductPage/></ProtectedRouteForAdmin>
     },
+    {
+      path:'/category/:categoryname',
+      element:<CategoryPage/>
+    }
     
   ])
 
