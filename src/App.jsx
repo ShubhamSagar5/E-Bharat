@@ -16,6 +16,7 @@ import AdminDashboard from './pages/admin/AdminDashboard'
 import AddProductPage from './pages/admin/AddProductPage'
 import UpdateProductPage from './pages/admin/UpdateProductPage'
 import MyState from './context/myState'
+import { Toaster } from 'react-hot-toast'
 
 function App() {
  
@@ -63,12 +64,14 @@ function App() {
     {
       path:'/updateproduct',
       element:<UpdateProductPage/>
-    }
+    },
+    
   ])
 
 return (
   <div>
     <MyState>
+    <Toaster/>
       <RouterProvider router={appRouter} />
     </MyState>
      
